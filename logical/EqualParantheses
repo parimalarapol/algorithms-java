@@ -1,0 +1,17 @@
+package logical;
+
+public class EqualParantheses {
+
+	boolean checkForEqualParantheses(String expression) {		
+		int paranthesesCount = 0;
+		
+		for(char character : expression.toCharArray()) {
+			if(character == '[' || character == '{' || character == '(')
+				paranthesesCount++;
+			else if (character == ']' || character == '}' || character == ')') 
+				paranthesesCount--;
+		}
+		return (paranthesesCount == 0) ? true : false;
+	}
+	
+}
